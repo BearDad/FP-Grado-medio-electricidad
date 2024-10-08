@@ -1,0 +1,462 @@
+\documentclass{report}
+% \usepackage{darkmode} \enabledarkmode
+\usepackage{wrapfig}
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+\graphicspath{{./figures/}}
+\title{\Huge{Maquinas Electricas}}
+\author{\large{Daniel Carbajales}}
+\date{11 de octubre de 2024}
+\hbadness=99999
+
+
+
+\begin{document}
+ \maketitle
+ \newpage
+%  |pdfbookmark[<level>]{<tittle>}{<dest>}
+ \pdfbookmark[section]{\contentsname}{toc}
+
+ \tableofcontents
+ 
+\fchapter{1}{TEMA 1: Magnetismo y electromagnetismo}\label{chap:1}
+  \section{Magnetismo }\label{sec:magnetismo}
+
+ Las maquinas electricas (o maquinas de campo magnético) son un grupo de maquinas que basan su funcionamiento
+ en los fenómenos provocados por el magnetismo y el electromagnetismo 
+ \dfn{Magnetismo}{Propiedad de algunos materiales en estado natural o para atraer Hierro ("\(\mathbb{Fe}\)")} 
+ Los elementos que tienen esta propiedad son denominados \textbf\emph{imanes} son clasficados en:
+ \begin{itemize}
+   \item\begin{description}
+       \item[Imanes permanentes:] Aquellos en los que el efecto de imanación se mantienen de forma continuada.
+    \end{description}
+  \item\begin{description}
+      \item[Imanes temporales:] Aquellos en los que el efecto de imanación se mantiene mientras se produce un efecto de magnetización sobre ellos(\(Ex.\) Electroimanes.)
+      \end{description}
+ \end{itemize}
+ Otra clasificación los divide entre:
+ \begin{itemize}
+   \item\begin{description}
+       \item[Naturales: ] De origen mineral, poseen magnetismo de forma natural. Pueden ser cerámicos o de tierras raras
+         \begin{itemize}
+           \item\begin{description}
+               \item[Cerámicos: ] Formados por bases de oxido de hierro(\(\mathit{Fe_2O_3}\)), estroncio (\(\mathit{SrO}\)) y bario (\(\mathit{BaO}\))   
+           \end{description} 
+         \item\begin{description}
+             \item[Tierras raras: ] Formados por elementos como el neodimio (\(\mathit{Nd}\)) y el samario (\(\mathit{Sm}\)) mucho mas potentes que los 
+               imanes cerámicos, con elevada remanencia y resistentes a elevadas temperaturas.  
+         \end{description}
+         \end{itemize}
+    \end{description}
+    \item\begin{description}
+        \item[Artificiales: ] Su campo magnético es generado mediante un estimulo externo \(\mathit{Ex.}\) holaEl acercamiento de 
+        otro{\boldit{imán}} o el paso de una {\boldit{corriente eléctrica}} proxima al metal.
+    \end{description}
+\end{itemize}
+Las partes de los polos con mayor fuerza magnetica se denominan {\boldit{polos}} ({\emph Norte y Sur}) la linea que los une y donde 
+hay menor magnetismo se denomina {\boldit{Linea neutra}}.
+los principales efectos del magnetismo son la atraccion de los polos {\boldit{"opuestos"}} y la repulsion entre polos {\boldit{"iguales"}}.
+
+\begin{figure}[h]
+  \centering
+  \caption{Campos magnéticos.}
+  \label{fig:magnets}
+  \medskip
+  \includegraphics[scale=0.5]{magnets.eps}
+\end{figure}
+
+\newpage
+  \section{Campo magnético }\label{sec:campo_magnético}
+Region del espacio donde se perciben las fuerzas magnéticas de un imán o de un elemento magnetizado  
+donde se produce un desplazamiento de cargas de \boldit{norte} a \boldit{sur} representadas graficamente 
+las lineas de fuerza\(_{\ref{fig:magnets}}\)
+.  Si las lineas de fuerza son de polos opuestos se suman y los imanes se atraen por el 
+contrario si las lineas de fuerza son de polos iguales se restan.
+
+  \subsection{Flujo magnético }\label{ssec:Flujo}
+№ total de lineas de fuerza que componen un campo magnético. Lo representa "\(\Phi\)" su unidad es el Weber "Wb"
+
+  \subsection{Inducción magnética}\label{ssec:Inducción}
+№ de lineas de fuerza que traspasan una unidad de superficie. La {"\boldit{inducción magnética}"} o densidad de flujo magnético 
+lo representa la letra \("\beta"\) y su unidad es el Tesla \("T"\)
+
+\begin{center}
+  \label{eq:Relacion entre Flujo e Inducción}
+  \[\Phi_{(Wb)} = \beta_{\mathit{(T)}} \cdot \mathcal{A}_{(m^2)}\]
+
+Equation: Relacion entre Flujo e Inducción
+\end{center}
+\nt{El instrumento de medida usado para conocer el valor de inducción magnética de un campo magnético se denomina : {"\boldit{Teslámetro}"}}
+\vspace{1em}
+  \section{Electromagnetismo }\label{sec:electromagnetismo}
+
+Denominado electromagnetismo, el campo de la electrotecnia que estudia los fenómenos eléctricos y magnéticos
+y los efectos que producen.
+
+  \subsection{Campo magnético en un conductor } \label{ssec:campo_magnetico_conductor}
+Cuando un conductor recto lo atraviesa una corriente eléctrica se crea un campo magnético cuyas líneas de fuerza son circulares y concentricas al conductor. 
+Si queremos conocer el sentido de las lineas de fuerza podemos usar la \boldit{"regla de la mano derecha"} como visto en \ref{fig:Campo Magnetico de un conductor recto}
+el pulgar representa \(\mathbf{I}\) y los dedos alrededor del conductor representan \(\mathbf{B}\).
+El campo magnético en un coductor recto se encuentra difuminado y no tiene aplicacion practica.
+\begin{figure}[h]
+  \centering
+  \caption{Campo magnetico de un conductor recto.}
+  \label{fig:Campo Magnetico de un conductor recto}
+  \vspace{.5em}
+  \includegraphics[width=0.45\textwidth]{magnetic_field_wire.pdf}
+  \vspace{.5em}
+  \begin{center}
+    \(\mathbf{B}\): Sentido del campo magnetico  \(\mathbf{I}\): Sentido de la corriente
+  \end{center}
+\end{figure}
+\newpage
+  \subsection{Campo magnético en una espira}\label{ssec:espira}
+Sin embargo en conductores con forma de espira los campos magnéticos generados tienden a concentrarse en el centro de la espira 
+ampliandose la fuerza del campo magnético. Podemos conocer el sentido del campo magnetico en una espira usando el metodo
+explicado anteriormente en la \boldit{sección: \ref{ssec:campo_magnetico_conductor}}
+
+
+  \subsection{Campo magnético en una bobina }\label{ssec:bobina}
+En caso de que deseemos conseguir un campo magnético superior al de la espira
+podemos unir varias espiras para formar una bobina o "\boldit{solenoide}". {\hspace*{\fill}}
+\begin{wrapfigure}[10]{l}{0.55\textwidth}
+  \includegraphics[width=0.5\textwidth]{magnetic_field_solenoid.pdf} 
+  \caption{Solenoide}
+  \label{fig:solenoide}
+\end{wrapfigure}
+Usando este metodo podemos sumar los campos magnéticos parciales de las espiras. 
+Para conocer el sentido del campo magnetico en una bobina o solenoide podemos usar el metodo explicado en la {\boldit{sección: \ref{ssec:campo_magnetico_conductor}}}
+esta vez el sentido de cierre de los dedos alrededor del conductor representa "\(\mathbf{I}\)" (sentido de la corriente) 
+y hacia donde apunte el pulgar representa "\(\mathbf{B}\)" (dirección lineas de fuerza).\hfill
+\fspace{2em}
+\subsection{Intensidad de campo magnético}\label{ssec:intensidad_de_campo_magnético}
+Magnitud fisica que indica la fuerza o intensidad del campo magnético. Es representada por la letra \boldit{"\(H\)"}. Su unidad es el amperio-vuelta/metro (\(Av/m \)).\fspace{1em} 
+Por lo tanto un campo magnético tiene mayor intensidad cuanto mayor es la corriente "\(I\)" que lo recorre y el № de espiras "\(N\)" que lo forman.
+Y sera menor a mayor longitud de la bobina o solenoide \(L\)
+\begin{center}
+  \label{eq:intensidad_campo_magnetico}
+  \begin{math}
+    H = \cfrac{N \cdot I}{L}
+  \end{math}
+  
+\end{center}
+
+  \subsection{Fuerza magnetomotriz }\label{ssec:fuerza_magnetomotriz}
+Magnitud física que describe la capacidad de un campo magnético de generar flujo magnético entre dos puntos de un circuito electromagnético.
+esta magnitud nos permite mantener el campo magnético en un circuito electromagnético. Es representada por la letra \boldit{"\(\mathcal{F}\)"}
+y es medida en amperios-vuelta (\( A_v \)). 
+
+
+\bigskip\begin{flushleft}
+Matemáticamente la fuerza magnetomotriz es directamente proporcional a la corriente "\(I\)" del circuito siendo constante 
+el número de espiras "\(N\)" que lo forman.
+\end{flushleft}
+  \begin{center}\[
+  \mathcal{F} = N \cdot I
+\]\label{eq:fuerza_magnetomotriz}
+  \(\mathcal{F}\): Fuerza magnetomotriz \hspace{1.5cm} \(N\): № de espiras \hspace{1.5cm} \(I\): Corriente
+  
+\end{center}
+\vspace{1.5em}
+Así podemos afirmar que equ: \ref{eq:intensidad_campo_magnetico} es igual a:
+\begin{center}
+  \[
+    H = \frac{\mathcal{F}}{L}
+  \]
+\end{center}
+\newpage
+  \subsection{Circuito magnético }\label{ssec:circuito_magnético}
+Si a un solenoide se le introduce una barra ferromagnético en su interior 
+los efectos del campo magnético generado aumentan. Por lo que podemos deducir 
+que un núcleo de cualquier material ferromagnético dentro de un circuito magnético aumenta la fuerza del campo magnético
+sin necesidad de aumentar la corriente \boldit{"\(I\)"}. Las lineas de fuerza dependen de la forma del núcleo ferromagnético
+\vspace{1.5em}\newline
+El circuito magnético basico es denominado \boldit{"electroimán"} el cual consiste en un nucle ferromagnético y 
+una bobina alimentada por una fuente de tensión. Al aplicar una corriente a la bobina, el núcleo es magnetizado
+y atrae otros cuerpos ferromagnéticos, sin embargo al cortar la corriente de la bobina el núcleo pierde sus propiedades
+magnéticas. 
+\vspace{1.5em}\newline
+En los circuitos con núcleo magnéticos al calcular la intensidad de campo(\(H\)): \(L\) es el perímetro central del núcleo y no 
+la longitud de la bobina.
+\vspace{1.5em}
+  \subsection{Materiales de los circuitos magnéticos}\label{ssec:materiales_circuitos_magneticos}
+Los materiales utilizados en los núcleos de los circuitos magnéticos poseen distintas propiedades
+y no todos se comportan igual ante el campo magnético que general o al que se ven expuestos.
+En los materiales hay cierto tipo de atomos denominado \boldit{spines} que tienen una orientación magnética propia
+y dependiendo de la orientación y magnitud de los spines podemos diferenciar los materiales en:
+\begin{itemize}
+  
+  \item{Diamagnéticos: }
+    En estos materiales los spines no tienen campo magnético pero al inducirles un campo magnético sus spines se orientan en el sentido contrario
+    del campo magnético inducido. Debido a esta propiedad se dice que los materiales diamagnéticos no interactuan con otros materiales magnéticos.
+    \newline(\boldit{\(Ex. \)} Oro, Silicio, Cobre, Hidrógeno, Helio, Germanio, Bronce, Grafito, etc.)
+  
+  \item{Paramagnéticos: } 
+    En estos materiales los spines tienen campo magnético propio y al inducirlos con un campo magnético externo, dichos spines tienden a orientarse
+    ligeramente en la direccion del campo magnético.
+    \newline(\boldit{\(Ex. \)} Aire, Titanio, Aluminio, etc.)
+ 
+  \item{Ferromagnéticos: }
+    En estos materiales los spines tienen campo magnético y al inducirlos con un campo magnético externo, 
+    dichos spines tienden a orientarse en la dirección del campo magnético. El hierro es el material por excelencia
+    no obstante suele alearse para obtener mejores resultados, como los imanes de \boldit{"neodimio"} (\(Nd_2Fe_{14}B\)).
+    \newline(\boldit{\(Ex. \)} Hierro, Cobalto, Níquel, etc.)
+\end{itemize}
+
+\begin{figure}[h]%
+\centering
+\begin{minipage}{.45\textwidth}
+      \centering
+      \includegraphics[width=.42\linewidth]{figures/spines_random.pdf}
+      \captionof{figure}{Spines en estado natural}
+      \label{fig:spines_random}
+    
+  \end{minipage}%
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[angle=270, origin=c, width=.45\linewidth]{figures/spines_organized.pdf}
+    \captionof{figure}{Spines siguiendo lineas de fuerza}
+    \label{fig:spines_organized}
+  \end{minipage}
+\label{fig:spines}
+\end{figure}
+\newpage
+  \subsection{Reluctancia magnética}\label{ssec:reluctancia}
+Al igual que la resistencia "$\Omega$" de un conductor electrico, la Reluctancia "$\mathrm{R}$" es la propiedad que tienen los materiales
+ferrmagnéticos de tener una mayor o menor oposición a la formación de líneas de fuerza de un campo magnetico.
+\newline\vspace{1em}
+Según la \boldit{Ley de Hopkinson}: establecemos la siguiente expresión en la que el flujo magnético "$\Phi$" es directamente proporcional
+a la fuerza magnetomotriz "$\mathcal{F}$" e inversamente proporcional a la reluctancia "$\mathrm{R}$":
+\begin{figure}[h]
+  \[
+    \mathrm{\Phi} = \frac{\mathcal{F}}{\mathrm{R}}
+  \]
+\label{equ:reluctancia}
+\end{figure}
+\newline Por lo tanto definimos la reluctancia como:
+\[
+\mathrm{R} = \frac{\mathcal{F}}{\Phi}
+\]
+\newline Y la fuerza magnetomotriz como:
+\[
+\mathcal{F} = \Phi \cdot \mathrm{R}
+\]
+
+  \subsection{Curva de magnetización}\label{ssec:curva_magnetizada}
+Al conectar una fuente de tensión variable a un circuito magnético, y usando un teslámetro para medir la inducción magnética $\beta$ generada
+observaremos que en un inicio con poca variación de la intensidad de campo magnético $H$, la $\beta$ aumentara rapidamente
+hasta llegar a un punto donde se estabalice, zona la cual es denominada de saturación, debido a que $\beta$ no aumenta aunque $H$ lo haga considerablemente.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.65\textwidth]{figures/curva_magnetizacion.pdf}
+  \caption{Curva de magnetización}
+  \label{fig:curva_magnetizacion}
+\end{figure}
+
+\newpage
+  \subsection{Permeabilidad magnetica}\label{ssec:permeabilidad_magnetica}
+  Es la \boldit{capacidad} que tienen los materiales de magnetizarse, podemos decir que la permeabilidad magnética es la 
+  magnitud inversa a la reluctancia. Es representada con la letra \boldit{"\(\mu\)"}(Mu) y su unidad es el \boldit{henrio/metro} ($H/m$). 
+  Matemáticamente es la relación entre la inducción "{$\mathbf{\beta}$}" y el campo magnético "{$\mathbf{H}$}"
+  \begin{figure}[h]%
+    \centering
+  \begin{minipage}{.45\textwidth}
+    {\LARGE
+  $$
+  \mu = \frac{\beta}{\mathrm{H}}
+$$}
+  \label{equ:permeabilidad}
+\end{minipage}%
+\begin{minipage}{.55\textwidth}
+  \centering{
+  \includegraphics[scale=0.6]{permeability/permeability.pdf}
+}
+\end{minipage}
+\caption{Equ: Permenabilidad magnetica y Curvas}
+\end{figure}
+
+  \subsection{Histeresis magnéticaa}\label{ssec:histeresis}
+Cuando sometemos a un material ferromagnético a un campo magnético externo, el material presentara
+un efecto de \boldit{magnetización}, sin embargo cuando los efectos del campo magnético externo cesan,
+podemos observar que los materiales presentan indicios de imanación.
+\vspace{1em}\newline
+A este efecto se le denomina \boldit{remanencia}, propiedad que tienen los materiales ferromagnéticos 
+de mantener los efectos de magnetización una vez finalizado el campo magnético externo.\newline
+Aunque la remanencia es favorable en la creación de imanes permanentes es contraproducente para la fabricación de imanes
+y máquinas eléctricas; debido a que pueden producir perdidas de enrgía por exceso de calor.
+\vspace{1em}
+\newline
+El estudio de la remanencia se realiza mediante el analisis de lo denominado \boldit{histéresis magnética}. Este proceso
+consiste en la representación grafica del comportamiento de un material ferromagnético sometido a un campo magnético del cual
+se modifican los valores de $\beta$ y de $\mathrm{H}$ mediante el denominado "\boldit{ciclo de histéresis}".
+\begin{figure}[h]
+  \vspace{1em}
+  \centering 
+  \includegraphics[width=0.65\linewidth]{hysteresis/hysteresis.png}
+  \caption{Ciclo de Histéresis}
+  \label{fig:hysteresis}
+
+\end{figure}
+\newpage
+    \subsubsection{Explicación del efecto de histéresis:}
+Debemos disponer de un material que no haya sido sometido con anterioridad a un campo magnético:
+\begin{enumerate}
+  \item Partimos del centro de la grafica y los valores de $\beta$ y $\mathrm{H}$ son van aumentando progresivamente y obtenemos pares de valores
+    de ambas magnitudes. Y la curva de imanación progresa como representado la \ref{fig:hysteresis} por la linea 
+    discontinua.
+
+  \item Alcanzado el punto de saturacioón (a), los valores de $\beta$ y $\mathrm{H}$ se van disminuyendo con la misma pauta utilizada para 
+    la curva anterior. Y observamos que cuando $\mathrm{H}$ es 0, el campo $\beta$ no lo es, presentandose un valor "$\beta_R$" ($R \to$ remanencia).
+
+  \item Si continuamos asignando valores negativos a la intensidad de campo  "$\mathrm{H}$", el campo sera nulo cuando 
+    alcanzemos el punto $-H_C$ ($C \to$ coercividad) corespondiente al denominado campo de coercividad. El cual deberemos aplicar a $H$ para que desaparezca
+    por completo la remanencia del material.
+
+  \item Si continuamos asignando valores negativos a $\beta$ y $\mathrm{H}$ llegaremos al punto de saturación contrario $m$.
+
+  \item Disminuiremos la asignación de valores a $\beta$ y $\mathrm{H}$ y observaremos que cuando la intensidad de campo $\mathrm{H}$ 
+    es 0, el campo $\beta$ no lo es, presentandose un valor "-$\beta_R$" que representa el magnetismo remanante de la polaridad opuesta.
+  \item Si continuamos asignando valores positivos a $\mathrm{H}$ y negativos a $\beta$, alcanzaremos el punto $H_C$ contrario
+    que necesitaremos aplicar para que el material pierda la remanencia.
+\end{enumerate}
+\vspace{1.5em}
+Podemos clasificar los materiales ferromagnéticos como \boldit{"duros"} y \boldit{"blandos"} en funcion del tamaño de su campo coercitivo.
+Usaremos materiales duros para la fabricación de imanes permanentes y materiales blandos para la fabricación de núcleos de máquinas rotativas 
+o transformadores.
+\fspace{1em}
+En la fabricación de máquinas eléctricas deberemos tener en cuenta las pérdidas por histéresis manifestadas en forma de calor,
+las cuales son mayores a mayor es el area que abarca la curva del ciclo de histéresis. Por lo que en la fabricación de máquinas eléctricas 
+que generen campos variables (como las de corriente alterna) deben fabricarse con los materiales mas blandos posibles.
+
+\vspace{1em}
+  \subsection{Corrientes de Foucault}\label{ssec:corrientes_de_foucault}
+\begin{wrapfigure}[9]{R}{0.5\textwidth}
+  \vspace{-1.5em}
+  \centering
+  \includegraphics[width=0.5\textwidth]{figures/parasite_currents.png}
+  \caption{Corrientes de Foucault}
+  \label{fig:parasite_currents}
+\end{wrapfigure}
+En núcleos ferromagnéticos sometidos a un campo eléctrico se producen unas series de corrientes inducidas 
+con forma de bucle en el interior del núcleo, las cuales se oponen a al campo magnético del exterior, 
+provocando que los electrones choquen constantemente generando calor y perdidas de energía.
+\fspace{1em}
+Por este motivo los núcleos de las máquinas eléctricas de corriente alterna se construyen con finas
+chapas de hierro al silicio aisladas entre si, lo cual reduce considerablemente las corrientes de Foucault.
+
+\newpage
+  \subsection{Fuerza ejercida sobre un conductor por el que circula una corriente}\label{ssec:fuerza_ejercida}
+Si se somete a un conductor por el que circula una corriente eléctrica a un campo magnético, el conductor tiende a salir del dicho campo
+en el sentido dado por la regla de los tres dedos de la mano izquierda (flemmings left hand rule). La aplicaremos de la siguiente forma:
+\begin{itemize}
+  \item Dedo índice indica el sentido del campo $\beta$ 
+  \item Dedo pulgar indica el sentido de la fuerza $F$
+  \item Dedo medio indica el sentido de la corriente eléctrica $I$  
+\end{itemize}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{left-hand/right-hand.pdf}
+\end{figure}
+\nt{
+  También se puede representar el sentido del campo $\beta$ sobre el papel una "$\times$" indicara un campo entrante 
+  y un "$\cdot$" indica un campo saliente.
+}
+\vspace{1.5em}
+  \subsection{Fuerza ejercida sobre una espira por la que circula una corriente}\label{ssec:fuerza_espira}
+
+
+  \subsection{Fuerza electromotriz ejercida en un conductor}\label{ssec:fuerza_electromotriz_conductor}
+
+  \subsection{autoinducción}\label{ssec:autoinducción}
+
+
+\fchapter{2}{TEMA 2: Materiales y herrramientas del bobinador}\label{chap:2}
+
+  \section{Materiales}\label{sec:materiales}
+    \vspace{2em}
+    \subsection{Hilo esmaltado}\label{ssec:hilo_esmaltado}
+    
+      Conductor eléctrico por excelencia utilizado en la fabricacón de circuitos electromagnéticos de maquinas eléctricas.
+      Aunque el cobre es el más utilizado en circuitos cuya ligereza sea importante se usara aluminio. Sin embargo el aluminio representa 
+      desventajas respecto al cobre, es díficil de soldar sin herramientas especiales y tiene una menor resistencia a las torsiones, lo que facilita
+      su rotura y deformcación al manipularlo.
+      \fspace{1em}
+      Al igual que otros materiales y dispositivos utilizados en electrotecnia, los cables esmaltados estan estandarizados, siendo las principales normas
+      las siguientes: 
+      \begin{itemize}
+        \item{\boldit{IEEC 60317:}}
+          Norma de la Comisión Electrotécnica Internacional, usada en Europa y Asia (excepto Japón).
+      \item{\boldit{NEMA MW 1000:}}
+          Norma de la National Electical Manufacturers Association de Norteamérica, aplicada en Norteamérica y en paises de latinoamérica.
+        \item{\boldit{JIS C 3202:}}
+          Norma de la Japanese Standards Association y de aplicación exclusiva en Japón.
+      \end{itemize}
+      \vspace{2em}
+      Son comercializados con distintas formas ($Ex.$ Circular, rectangular o cuadrado) distintas geometrías permiten
+      aprovechar el espacio de los carretes (transformadores) y los espacios de las ranuras (máquinas rotativas).  
+      \fspace{1em}
+      Las principales caracteristicas que deberemos conocer son:
+      \begin{itemize}
+        
+        \item{Díametro:} El hilo esmaltado es distribuido por su diametro y no por su sección como los conductores tipicos
+
+        \item{Tipo y espesor del esmalte:} Fabricados usualmente con barnices de poliéster, poliuretano, peliésteramida. Su espesor esta 
+          definido por su tensión de ruptura dividendose entre grado 1, grado 2 , grado 3.
+
+        \item{Valor térmico:} Indice maximo para que el conductor trabaje 20.000 horas (a menor temperatura de trabajo 
+          mayor es la vida util del conductor).
+
+        \item{Soldabilidad:} Capacidad del conductor para unirse a otros conductores o materiales. expresado en segundos/ temperatura.
+
+        \item{Peso:} El hilo esmaltado a diferencia de los conductores de linea se compra al peso.
+
+        \item{Resistencia eléctrica nominal:} Oposición que presenta el conductor al flujo de corriente elecrtica.
+
+        \item{Tensión de perforación del aislamiento:} Valor en voltios por el que se deteriora el esmalte.
+
+      \end{itemize}
+    \vspace{2em}
+    \subsection{Carretes para el hilo esmaltado}\label{ssec:carretes_hilo}
+      Sirven para empaquetar el hilo esmaltado, al estar normalizados en tamaño y forma permiten su uso en distintas marcas de bobinadoras.
+      Son fabricados en distintos tamaños y formas (Cilíndrico, Bicónico y Angular).
+    \newpage
+    \subsection{Materiales aislantes}\label{ssec:materiales_aislantes}
+      Su objetivo es el de aislar los conductores del bobinado, pueden ser sólidos o líquidos, dentro de los sólidos pueden ser,
+      rígidos o flexlibles.
+      \fspace{1em}
+      Al igual que con otros materiales, el fabricante nos proporciona una serie de características las de mayor interés son las siguientes:
+      \begin{itemize}
+
+        \item{Espesor:} Dado en milímetros, los materiales de lámina flexible son de 0,1 a 3.00 mm,
+          mientrasm que los de tipo rígido pueden tener varios centimetros de grosor
+
+        \item{Rígidez dieléctrica:} Expresado en Kv/mm (Kilovoltios/milímetro) nos da a conocer el limite donde el material pierde
+          sus propiedades aislantes.
+
+        \item{Clase térmica:} Temperatura máxima a la que pueden ser sometidos los materiales sin que pierdan sus propiedades 
+          aislantes. Normalizado en "Grados celcius" (C).
+
+      \end{itemize}
+        \subsubsection{Aislantes flexibles}\label{sssec:aislantes_flexibles}
+          Se presentan en láminas de papel o de cartón flexible, utilizados para aislar los devanados una máquina eléctrica
+          entre si y con cualquier perte metálica proxima a ellos. Sus principales características son:
+          \begin{itemize}
+            \item{} Alta resistencia a la abrasión.
+            \item{} Buena resistenca termica.
+            \item{} Alto poder dieléctrico.
+            \item{} bajo indice de absorción de agua y humedad.
+          \end{itemize}
+          \vspace{1em}
+          Uno de los aislantes mas utilizados dentro de esta categoria es el denominado Presspan el cual suele ser combinado con 
+          otros materiales ($Ex.$ película de poliéster). No obstante existen otros muchos aislantes que tienen mejores 
+          prestaciones tanto mecánicas como eléctricas, que complementas o sustituyen al Presspan. Tales como: 
+          El papel crepe, la fibra vulcanizada, el kapton, voltaflex y nomex.
+
+        \subsubsection{Cuñas y aislantes de ranura}\label{sssec:cuñas_y_aislantes_ranura}
+          También conocidos como cajetines, son materiales flexibles     
+
+fooking 
+hell
+/__(...----...)___/
+\end{document}

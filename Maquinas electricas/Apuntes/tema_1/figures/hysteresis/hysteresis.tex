@@ -1,0 +1,75 @@
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{amsmath} % for \dfrac
+\usepackage{bm} % \bm
+\usepackage{physics}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=newest, width=10cm}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows.meta}
+\tikzset{>=latex} % for LaTeX arrow head
+\contourlength{1.6pt}
+\usepackage{xcolor}
+\colorlet{Bcol}{violet!90}
+\colorlet{BFcol}{red!60!black}
+\colorlet{veccol}{green!45!black}
+\colorlet{Icol}{blue!70!black}
+\colorlet{mucol}{red!90!black}
+\tikzstyle{BField}=[->,thick,Bcol]
+\tikzstyle{current}=[->,Icol] %thick,
+\tikzstyle{force}=[->,thick,BFcol]
+\tikzstyle{vector}=[->,thick,veccol]
+\tikzstyle{mu vector}=[->,thick,mucol]
+\tikzstyle{velocity}=[->,very thick,vcol]
+\tikzstyle{metal}=[top color=black!15,bottom color=black!25,middle color=black!5,shading angle=20]
+\tikzset{
+  BFieldLine/.style={thick,Bcol,decoration={markings,mark=at position #1 with {\arrow{latex}}},
+                                 postaction={decorate}},
+  BFieldLine/.default=0.5,
+  ArrowLine/.style={very thick,decoration={markings,mark=at position #1 with {\arrow{latex}}},
+                               postaction={decorate}},
+  ArrowLine/.default=0.5
+}
+\usepackage{multicol,array}
+
+\begin{document}
+
+
+\definecolor{love}{HTML}{eb6f92}
+\definecolor{pine}{HTML}{31748f}
+\definecolor{foam}{HTML}{9ccfd8}
+\definecolor{iris}{HTML}{c4a7e7}
+
+
+% HYSTERESIS
+\colorlet{myred}{red!60!black}
+\colorlet{myblue}{pine}
+\colorlet{mygreen}{foam}
+\begin{tikzpicture}
+  \def\xmax{2.0}
+  \def\ymax{1.8}
+  \def\A{0.8*\ymax}
+  \def\R{0.06}
+  \coordinate (A) at (1.2*\A,\A);
+  \coordinate (-A) at (-1.2*\A,-\A);
+  \coordinate (T) at (0, 0.80*\A);
+  \coordinate (B) at (0,-0.80*\A);
+  
+  \draw[->,thick] (0,-\ymax) -- (0,\ymax) node[left] {$B+$};
+  \draw[->,thick] (-\xmax,0) -- (\xmax,0) node[below] {$H+$};
+  \draw[->,thick] (0,\ymax) -- (0,-\ymax) node[left] {$B-$};
+  \draw[->,thick] (\xmax,0) -- (-\xmax,0) node[below] {$H-$};
+  \draw[ArrowLine=0.65,myblue] (A) to[out=-180,in=20] (T);
+  \draw[ArrowLine=0.40,myblue] (T) to[out=-160,in=20] (-A); %node[midway,above] {$1$};
+  \draw[ArrowLine=0.60,mygreen] (-A) to[out=10,in=-160] (B); %node[midway,left] {$2$};
+  \draw[ArrowLine=0.38,mygreen] (B) to[out=20,in=-170] (A); %node[midway,below] {$3$};
+  \draw[ArrowLine=0.45,love] (0,0) to[out=10,in=-180] (A); %node[midway,right] {$4$};
+  \fill[love!60!black] (A) circle (\R);
+  \fill[myblue!60!black] (T) circle (\R) node[above=4,left] {$B_\mathrm{r}/\mu_0$};
+  \fill[mygreen!60!black] (-A) circle (\R);
+  \fill[mygreen!60!black] (-0.6,0) circle (\R) node[below=3,right] {$-B_\mathrm{r}/\mu_0$};
+\end{tikzpicture}
+
+
+\end{document}
