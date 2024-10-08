@@ -1,0 +1,164 @@
+{
+  "main": {
+    "id": "c66de2dbbd6bf1ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "efc409cedc995307",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1db64183e2c0273d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "I. Distribución/Calculo_de_factura_electrica.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8a3b94fd3817e56e",
+    "type": "split",
+    "children": [
+      {
+        "id": "a60c47def0f3bfc2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f857e282ab2acfcc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "17320e4bb59d03a0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ff0c4744cd23c7a3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "2b48f0a4b2b8d7ce",
+    "type": "split",
+    "children": [
+      {
+        "id": "a34005f05459f305",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cfb4e64b7ff5e211",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "I. Distribución/Calculo_de_factura_electrica.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b4765de415ca7fe0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "I. Distribución/Calculo_de_factura_electrica.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8ad45b59efb564be",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5c0042fdc8f3a768",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "I. Distribución/Calculo_de_factura_electrica.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "1db64183e2c0273d",
+  "lastOpenFiles": [
+    "I. Distribución/tmp1.tmp",
+    "I. Distribución/main.synctex(busy)",
+    "I. Distribución/main.log",
+    "I. Distribución/main.fls",
+    "I. Distribución/pdflatex255184.fls",
+    "I. Distribución/main.fdb_latexmk",
+    "I. Distribución/main.aux",
+    "I. Distribución/main.tex~",
+    "I. Distribución/4913",
+    "I. Distribución/main.tex",
+    "I. Distribución/something.tex~"
+  ]
+}
