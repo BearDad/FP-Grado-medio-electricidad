@@ -1,35 +1,41 @@
 \documentclass{report}
+\usepackage{darkmode} %\enabledarkmode
 
 \input{preamble}
 \input{macros}
 \input{letterfonts}
 
-\title{\Huge{Maquinas Electricas}\\ \centering Tema 1: apuntes}
+\title{\Huge{Template}}
 \author{\huge{Daniel Carbajales}}
-\date{10 de octubre de 2024}
+\date{11 de octubre de 2024}
 
 \begin{document}
-\maketitle
-\newpage
-% |pdfbookmark[<level>]{<tittle>}{<dest>}
-\pdfbookmark[section]{\contentsname}{toc}
-\tableofcontents
-\pagebreak
-\chapter{}
-\section{Random example}
-\qs{ssomething somthingsomething somthingsomething somthingomething somthing}{Verify example 2.28 (f).}
-\enumerate
-\item something something
-\item something something
-$\liff something $
-hola
-\nt{
- hola que tal
+ \maketitle
+ \newpage
+%  |pdfbookmark[<level>]{<tittle>}{<dest>}
+ \pdfbookmark[section]{\contentsname}{toc}
+ \tableofcontents
+ \pagebreak
+ \chapter{Template test}
+\section{custom commands}
+\qs{question}{command: 
+\commandToText{\qs\{tittle\}\{content\}}}
+\nt{command: \commandToText{\nt\{content\}}}
+\dfnc{Definition of chapter}{command: \commandToText{\dfnc\{tittle\}\{content\}}
 }
-\dfnc{adiós}{
-  hola que tal
+\dfn{Definition}{command: \commandToText{\dfn\{tittle\}\{content\}} }
+\thm{theorem}{command: \commandToText{\thm\{tittle\}\{content\}} }
+\thmcon{same as theorem but with no header\\ command: \commandToText{\thmcon\{content\}}}
+\cor{}{\commandToText{\cor\{subtittle}\{content\}} 
+\mlemma{}{\commandToText{\mlemma\{subtittle\}\{content\}}}
+\mprop{}{\commandToText{\mprop\{subtittle\}\{content\}}}
+\clm{command}{}{claim box command \commandToText{\clm\{subtittle\}\{useless??\}\{content\}}}
+\mclm{dahsodhao}{djaos}
+\pf{dhaso}{hole}
+\ex{command}{this is an example box\\ it uses the command \commandToText{\ex\{subtittle\}\{content\}}
+ \\
+ it accepts math blocks:\\$if{1}\leq to 2 \geq 5$
+
 }
-\dfn{hola}{
-adios
-}
+
 \end{document}

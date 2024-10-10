@@ -13,7 +13,7 @@
 \usepackage{hyperref,theoremref}
 \hypersetup{
 	pdftitle={Assignment},
-	colorlinks=true, linkcolor=doc!90,
+	colorlinks=true, linkcolor=overlay!90,
 	bookmarksnumbered=true,
 	bookmarksopen=true
 }
@@ -33,7 +33,7 @@
 \usepackage{pdfpages}
 \usepackage{transparent}
 
-\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{iris}{#1}}
 \SetCommentSty{mycommfont}
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}
@@ -81,18 +81,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Rose Pine 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\definecolor{base}{HTML}{faf4ed}
-\definecolor{surface}{HTML}{fffaf3}
-\definecolor{overlay}{HTML}{f2e9e1}
-\definecolor{muted}{HTML}{9893a5}
-\definecolor{subtle}{HTML}{797593}
-\definecolor{text}{HTML}{575279}
-\definecolor{love}{HTML}{b4637a}
-\definecolor{gold}{HTML}{ea9d34}
-\definecolor{rose}{HTML}{d7827e}
-\definecolor{pine}{HTML}{286983}
-\definecolor{foam}{HTML}{56949f}
-\definecolor{iris}{HTML}{907aa9}
+\definecolor{base}{HTML}{191724}
+\definecolor{surface}{HTML}{1f1d2e}
+\definecolor{overlay}{HTML}{26233a}
+\definecolor{muted}{HTML}{6e6a86}
+\definecolor{subtle}{HTML}{908caa}
+\definecolor{text}{HTML}{e0def4}
+\definecolor{love}{HTML}{eb6f92}
+\definecolor{gold}{HTML}{f6c177}
+\definecolor{rose}{HTML}{ebbcba}
+\definecolor{pine}{HTML}{31748f}
+\definecolor{foam}{HTML}{9ccfd8}
+\definecolor{iris}{HTML}{c4a7e7}
 
 
 
@@ -169,18 +169,18 @@
 {%
 	enhanced
 	,breakable
-	,colback = myp!10
+	,colback = iris!25
 	,frame hidden
 	,boxrule = 0sp
-	,borderline west = {2pt}{0pt}{myp!85!black}
+	,borderline west = {2pt}{0pt}{iris!95!black!100}
 	,sharp corners
 	,detach title
 	,before upper = \tcbtitle\par\smallskip
-	,coltitle = myp!85!black
+	,coltitle = iris!95!black
 	,fonttitle = \bfseries\sffamily
 	,description font = \mdseries
 	,separator sign none
-	,segmentation style={solid, myp!85!black}
+	,segmentation style={solid, iris!95!black}
 }
 {th}
 \tcbuselibrary{theorems,skins,hooks}
@@ -188,18 +188,18 @@
 {%
 	enhanced
 	,breakable
-	,colback = myp!10
+	,colback = iris!25
 	,frame hidden
 	,boxrule = 0sp
-	,borderline west = {2pt}{0pt}{myp!85!black}
+	,borderline west = {2pt}{0pt}{iris!95!black}
 	,sharp corners
 	,detach title
 	,before upper = \tcbtitle\par\smallskip
-	,coltitle = myp!85!black
+	,coltitle = iris!95!black
 	,fonttitle = \bfseries\sffamily
 	,description font = \mdseries
 	,separator sign none
-	,segmentation style={solid, myp!85!black}
+	,segmentation style={solid, iris!95!black}
 }
 {th}
 
@@ -207,9 +207,9 @@
 %================================
 % LENMA
 %================================
-
+% this one is in use
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{Lenma}{Lenma}
+\newtcbtheorem[number within=section]{Lenma}{Lemma}
 {%
 	enhanced,
 	breakable,
@@ -227,9 +227,9 @@
 	segmentation style={solid, mylenmafr},
 }
 {th}
-
+% this one is not 
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=chapter]{lenma}{Lenma}
+\newtcbtheorem[number within=chapter]{lenma}{Lemma}
 {%
 	enhanced,
 	breakable,
@@ -303,18 +303,18 @@
 {%
 	enhanced
 	,breakable
-	,colback = myg!10
+	,colback = foam!15
 	,frame hidden
 	,boxrule = 0sp
-	,borderline west = {2pt}{0pt}{myg}
+	,borderline west = {2pt}{0pt}{foam!100!black}
 	,sharp corners
 	,detach title
 	,before upper = \tcbtitle\par\smallskip
-	,coltitle = myg!85!black
+	,coltitle = foam!100!black
 	,fonttitle = \bfseries\sffamily
 	,description font = \mdseries
 	,separator sign none
-	,segmentation style={solid, myg!85!black}
+	,segmentation style={solid, foam!100!black}
 }
 {th}
 
@@ -606,7 +606,7 @@
 
 \newcommand{\thm}[2]{\begin{Theorem}{#1}{}#2\end{Theorem}}
 \newcommand{\cor}[2]{\begin{Corollary}{#1}{}#2\end{Corollary}}
-\newcommand{\mlenma}[2]{\begin{Lenma}{#1}{}#2\end{Lenma}}
+\newcommand{\mlemma}[2]{\begin{Lenma}{#1}{}#2\end{Lenma}}
 \newcommand{\mprop}[2]{\begin{Prop}{#1}{}#2\end{Prop}}
 \newcommand{\clm}[3]{\begin{claim}{#1}{#2}#3\end{claim}}
 \newcommand{\wc}[2]{\begin{wconc}{#1}{}\setlength{\parindent}{1cm}#2\end{wconc}}
@@ -617,9 +617,9 @@
 \newcommand{\qs}[2]{\begin{solution}{#1}{}#2\end{solution}}
 \newcommand{\pf}[2]{\begin{myproof}[#1]#2\end{myproof}}
 \newcommand{\nt}[1]{\begin{note}#1\end{note}}
-
-\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-		\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+\newcommand{\commandToText}[1]{\texttt{\string#1}}
+\newcommand{\circled}[1]{\tikz[baseline=(char.base)]{
+\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
 \newcommand\getcurrentref[1]{%
 	\ifnumequal{\value{#1}}{0}
 	{??}
@@ -758,14 +758,14 @@
 \titlecontents{chapter}[3.7pc]
 {\addvspace{30pt}%
 	\begin{tikzpicture}[remember picture, overlay]%
-		\draw[fill=doc!60,draw=doc!60] (-7,-.1) rectangle (-0.9,.5);%
+		\draw[fill=pine!60,draw=pine!60] (-7,-.1) rectangle (-0.9,.5);%
 		\pgftext[left,x=-3.5cm,y=0.2cm]{\color{white}\Large\sc\bfseries Chapter\ \thecontentslabel};%
-	\end{tikzpicture}\color{doc!60}\large\sc\bfseries}%
+	\end{tikzpicture}\color{pine!60}\large\sc\bfseries}%
 {}
 {}
 {\;\titlerule\;\large\sc\bfseries Page \thecontentspage
 	\begin{tikzpicture}[remember picture, overlay]
-		\draw[fill=doc!60,draw=doc!60] (2pt,0) rectangle (4,0.1pt);
+		\draw[fill=pine!60,draw=pine!60] (2pt,0) rectangle (4,0.1pt);
 	\end{tikzpicture}}%
 \titlecontents{section}[3.7pc]
 {\addvspace{2pt}}
@@ -785,8 +785,8 @@
 	\chapter*{%
 	  \vspace*{-20\p@}%
 	  \begin{tikzpicture}[remember picture, overlay]%
-		  \pgftext[right,x=15cm,y=0.2cm]{\color{doc!60}\Huge\sc\bfseries \contentsname};%
-		  \draw[fill=doc!60,draw=doc!60] (13,-.75) rectangle (20,1);%
+		  \pgftext[right,x=15cm,y=0.2cm]{\color{pine!60}\Huge\sc\bfseries \contentsname};%
+		  \draw[fill=pine!60,draw=pine!60] (13,-.75) rectangle (20,1);%
 		  \clip (13,-.75) rectangle (20,1);
 		  \pgftext[right,x=15cm,y=0.2cm]{\color{white}\Huge\sc\bfseries \contentsname};%
 	  \end{tikzpicture}}%
