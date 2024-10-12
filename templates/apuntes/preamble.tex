@@ -32,6 +32,8 @@
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 \newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{iris}{#1}}
 \SetCommentSty{mycommfont}
@@ -602,8 +604,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SELF MADE COMMANDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+\newcommand{\boldit}[1]{\begin{bf}\begin{em} #1\end{em}\end{bf}}
 \newcommand{\thm}[2]{\begin{Theorem}{#1}{}#2\end{Theorem}}
 \newcommand{\cor}[2]{\begin{Corollary}{#1}{}#2\end{Corollary}}
 \newcommand{\mlemma}[2]{\begin{Lenma}{#1}{}#2\end{Lenma}}

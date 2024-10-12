@@ -1,13 +1,15 @@
 \documentclass{report}
 \usepackage{darkmode} %\enabledarkmode
-
+\usepackage{wrapfig}
 \input{preamble}
 \input{macros}
 \input{letterfonts}
-
-\title{\Huge{Template}}
-\author{\huge{Daniel Carbajales}}
+\graphicspath{{./figures/}}
+\title{\Huge{Maquinas Electricas}}
+\author{\large{Daniel Carbajales}}
 \date{11 de octubre de 2024}
+
+
 
 \begin{document}
  \maketitle
@@ -16,26 +18,65 @@
  \pdfbookmark[section]{\contentsname}{toc}
  \tableofcontents
  \pagebreak
- \chapter{Template test}
-\section{custom commands}
-\qs{question}{command: 
-\commandToText{\qs\{tittle\}\{content\}}}
-\nt{command: \commandToText{\nt\{content\}}}
-\dfnc{Definition of chapter}{command: \commandToText{\dfnc\{tittle\}\{content\}}
-}
-\dfn{Definition}{command: \commandToText{\dfn\{tittle\}\{content\}} }
-\thm{theorem}{command: \commandToText{\thm\{tittle\}\{content\}} }
-\thmcon{same as theorem but with no header\\ command: \commandToText{\thmcon\{content\}}}
-\cor{}{\commandToText{\cor\{subtittle}\{content\}} 
-\mlemma{}{\commandToText{\mlemma\{subtittle\}\{content\}}}
-\mprop{}{\commandToText{\mprop\{subtittle\}\{content\}}}
-\clm{command}{}{claim box command \commandToText{\clm\{subtittle\}\{useless??\}\{content\}}}
-\mclm{dahsodhao}{djaos}
-\pf{dhaso}{hole}
-\ex{command}{this is an example box\\ it uses the command \commandToText{\ex\{subtittle\}\{content\}}
- \\
- it accepts math blocks:\\$if{1}\leq to 2 \geq 5$
+ \phantomsection
+\setcounter{chapter}{1}
+ \addcontentsline{toc}{chapter}{Tema 1}
+ \section{Magnetismo}
 
-}
+ Las maquinas electricas (o maquinas de campo magnético) son un grupo de maquinas que basan su funcionamiento
+ en los fenómenos provocados por el magnetismo y el electro-magnetismo 
+ \dfn{Magnetismo}{Propiedad de algunos materiales en estado natural o para atraer Hierro ("\(\mathbb{Fe}\)")} 
+ Los elementos que tienen esta propiedad son denominados \textbf\emph{imanes} son clasficados en:
+ \begin{itemize}
+   \item\begin{description}
+       \item[Imanes permanentes:] Aquellos en los que el efecto de imanación se mantienen de forma continuada.
+    \end{description}
+  \item\begin{description}
+      \item[Imanes temporales:] Aquellos en los que el efecto de imanación se mantiene mientras se produce un efecto de magnetización sobre ellos(\(Ex.\) Electroimanes.)
+      \end{description}
+ \end{itemize}
+ Otra clasificación los divide entre:
+ \begin{itemize}
+   \item\begin{description}
+       \item[Naturales: ] De origen mineral, poseen magnetismo de forma natural. Pueden ser cerámicos o de tierras raras
+         \begin{itemize}
+           \item\begin{description}
+               \item[Cerámicos: ] Formados por bases de oxido de hierro(\(\mathit{Fe_2O_3}\)), estroncio (\(\mathit{SrO}\)) y bario (\(\mathit{BaO}\))
+             
+           \end{description} 
+         \item\begin{description}
+             \item[Tierras raras: ] Formados por elementos como el neodimio (\(\mathit{Nd}\)) y el samario (\(\mathit{Sm}\)) mucho mas potentes que los 
+               imanes cerámicos, con elevada remanencia y resistentes a elevadas temperaturas.  
+         \end{description}
+         \end{itemize}
+    \end{description}
+    \item\begin{description}
+        \item[Artificiales: ] Su campo magnetico es generado mediante un estimulo externo \(\mathit{Ex.}\) holaEl acercamiento de 
+        otro{\boldit{imán}} o el paso de una {\boldit{corriente eléctrica}} proxima al metal.
+    \end{description}
+\end{itemize}
+Las partes de los polos con mayor fuerza magnetica se denominan {\boldit{polos}} ({\emph Norte y Sur}) la linea que los une y donde 
+hay menor magnetismo se denomina {\boldit{Linea neutra}}.
+los principales efectos del magnetismo son la atraccion de los polos {\boldit{"opuestos"}} y la repulsion entre polos {\boldit{"iguales"}}.
+
+% \begin{wrapfigure}[6]{l}{0.5\textwidth}
+%   \centering
+%   \includegraphics[width=0.45\textwidth]{magnets.eps}
+%   \label{fig:magnets}
+%   \caption{$\mathit{Ex.}$ Campos magneticos.}
+% \end{wrapfigure}
+
+
+\begin{figure}[h]
+  \centering
+  \caption{$\mathit{Ex.}$ Campos magneticos.}
+  \label{fig:magnets}
+  \includegraphics[width=0.45\textwidth]{magnets.eps}
+\end{figure}
+
+
+\newpage
+\section{campo magnetico}
+Region del espacio donde se perciben las fuerzas magnéticas de un imán o de un elemento magnetizado  \ref{fig:magnets}
 
 \end{document}
