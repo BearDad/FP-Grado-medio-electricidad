@@ -35,6 +35,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[mathcal]{eucal}
+\usepackage{float}
 \usepackage{pgfplots}
 \pgfplotsset{compat=newest, width=10cm}
 
@@ -47,7 +48,6 @@
 
 \usepackage{tikzsymbols}
 \renewcommand\qedsymbol{$\Laughey$}
-
 
 %\usepackage{import}
 %\usepackage{xifthen}
@@ -607,6 +607,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SELF MADE COMMANDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\fixhbox}{{\hspace*{\fill}}}
 \newcommand{\boldit}[1]{\begin{bf}\begin{em} #1\end{em}\end{bf}}
 \newcommand{\thm}[2]{\begin{Theorem}{#1}{}#2\end{Theorem}}
 \newcommand{\cor}[2]{\begin{Corollary}{#1}{}#2\end{Corollary}}
@@ -758,7 +759,9 @@
 \usepackage{tikz}
 \definecolor{doc}{RGB}{246,193,119}
 \usepackage{titletoc}
+\usepackage{titlesec}
 \contentsmargin{0cm}
+\titlelabel{\thetitle. \quad}
 \titlecontents{chapter}[3.7pc]
 {\addvspace{30pt}%
 	\begin{tikzpicture}[remember picture, overlay]%
@@ -775,15 +778,14 @@
 {\addvspace{2pt}}
 {\contentslabel[\thecontentslabel]{2pc}}
 {}
-{\hfill\small \thecontentspage}
+{\hfill\small\bfseries Pg. \thecontentspage}
 []
-\titlecontents*{subsection}[3.7pc]
+\titlecontents{subsection}[3.7pc]
 {\addvspace{-1pt}\small}
+{\qquad\contentslabel[\thecontentslabel]{2pc}}
 {}
-{}
-{\ --- \small\thecontentspage}
-[ \textbullet\ ][]
-
+{\hfill\small\bfseries Pg. \thecontentspage}
+[]
 \makeatletter
 \renewcommand{\tableofcontents}{%
 	\chapter*{%

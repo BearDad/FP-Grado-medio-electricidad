@@ -16,12 +16,14 @@
  \newpage
 %  |pdfbookmark[<level>]{<tittle>}{<dest>}
  \pdfbookmark[section]{\contentsname}{toc}
+
  \tableofcontents
+ 
  \pagebreak
- \phantomsection
+\phantomsection
 \setcounter{chapter}{1}
  \addcontentsline{toc}{chapter}{Tema 1}
- \section{Magnetismo}
+ \section{Magnetismo }\label{sec:magnetismo}
 
  Las maquinas electricas (o maquinas de campo magnético) son un grupo de maquinas que basan su funcionamiento
  en los fenómenos provocados por el magnetismo y el electromagnetismo 
@@ -41,8 +43,7 @@
        \item[Naturales: ] De origen mineral, poseen magnetismo de forma natural. Pueden ser cerámicos o de tierras raras
          \begin{itemize}
            \item\begin{description}
-               \item[Cerámicos: ] Formados por bases de oxido de hierro(\(\mathit{Fe_2O_3}\)), estroncio (\(\mathit{SrO}\)) y bario (\(\mathit{BaO}\))
-             
+               \item[Cerámicos: ] Formados por bases de oxido de hierro(\(\mathit{Fe_2O_3}\)), estroncio (\(\mathit{SrO}\)) y bario (\(\mathit{BaO}\))   
            \end{description} 
          \item\begin{description}
              \item[Tierras raras: ] Formados por elementos como el neodimio (\(\mathit{Nd}\)) y el samario (\(\mathit{Sm}\)) mucho mas potentes que los 
@@ -59,14 +60,6 @@ Las partes de los polos con mayor fuerza magnetica se denominan {\boldit{polos}}
 hay menor magnetismo se denomina {\boldit{Linea neutra}}.
 los principales efectos del magnetismo son la atraccion de los polos {\boldit{"opuestos"}} y la repulsion entre polos {\boldit{"iguales"}}.
 
-% \begin{wrapfigure}[6]{l}{0.5\textwidth}
-%   \centering
-%   \includegraphics[width=0.45\textwidth]{magnets.eps}
-%   \label{fig:magnets}
-%   \caption{$\mathit{Ex.}$ Campos magneticos.}
-% \end{wrapfigure}
-
-
 \begin{figure}[h]
   \centering
   \caption{Campos magnéticos.}
@@ -75,49 +68,113 @@ los principales efectos del magnetismo son la atraccion de los polos {\boldit{"o
   \includegraphics[scale=0.5]{magnets.eps}
 \end{figure}
 
-
 \newpage
-\section{Campo magnético}
+\section{Campo magnético }\label{sec:campo_magnético}
 Region del espacio donde se perciben las fuerzas magnéticas de un imán o de un elemento magnetizado  
 donde se produce un desplazamiento de cargas de \boldit{norte} a \boldit{sur} representadas graficamente 
 las lineas de fuerza\(_{\ref{fig:magnets}}\)
 .  Si las lineas de fuerza son de polos opuestos se suman y los imanes se atraen por el 
 contrario si las lineas de fuerza son de polos iguales se restan.
 
-\subsection{Flujo magnético}
+\subsection{Flujo magnético }\label{ssec:Flujo}
 № total de lineas de fuerza que componen un campo magnético. Lo representa "\(\Phi\)" su unidad es el Weber "Wb"
 
-\subsection{Inducción magnética}
+\subsection{Inducción magnética}\label{ssec:Inducción}
 № de lineas de fuerza que traspasan una unidad de superficie. La {"\boldit{inducción magnética}"} o densidad de flujo magnético 
 lo representa la letra \("\beta"\) y su unidad es el Tesla \("T"\)
-\
-\begin{equation}
-  \label{eq:Relacion entre Flujo e Inducción}
-  \Phi_{(Wb)} = \beta_{\mathit{(T)}} \times \mathcal{A}_{(m^2)}
-\end{equation}
+
 \begin{center}
+  \label{eq:Relacion entre Flujo e Inducción}
+  \[\Phi_{(Wb)} = \beta_{\mathit{(T)}} \cdot \mathcal{A}_{(m^2)}\]
+
 Equation: Relacion entre Flujo e Inducción
 \end{center}
 \nt{El instrumento de medida usado para conocer el valor de inducción magnética de un campo magnético se denomina : {"\boldit{Teslámetro}"}}
 \medskip
-\section{electromagnetismo}
+\section{electromagnetismo }\label{sec:electromagnetismo}
 
 Denominado electromagnetismo, el campo de la electrotecnia que estudia los fenómenos eléctricos y magnéticos
 y los efectos que producen.
 
-\subsection{Campo magnético en un conductor }
-
+\subsection{Campo magnético en un conductor } \label{ssec:campo_magnetico_conductor}
+Cuando un conductor recto lo atraviesa una corriente eléctrica se crea un campo magnético cuyas líneas de fuerza son circulares y concentricas al conductor. 
+Si queremos conocer el sentido de las lineas de fuerza podemos usar la \boldit{"regla de la mano derecha"} como visto en \ref{fig:Campo Magnetico de un conductor recto}
+el pulgar representa \(\mathbf{I}\) y los dedos alrededor del conductor representan \(\mathbf{B}\).
+El campo magnético en un coductor recto se encuentra difuminado y no tiene aplicacion practica.
 \begin{figure}[h]
-\centering
-\caption{Campo magnetico de un conductor recto.}
-\label{fig:Campo Magnetico de un conductor recto}
-\medskip
-\includegraphics[scale=1.25]{magnetic_field_wire.pdf}
-\medskip
-\begin{center}
-  \(\mathbf{B}\): Sentido del campo magnetico  \(\mathbf{I}\): Sentido de la corriente
-\end{center}
+  \centering
+  \caption{Campo magnetico de un conductor recto.}
+  \label{fig:Campo Magnetico de un conductor recto}
+  \medskip
+  \includegraphics[width=0.45\textwidth]{magnetic_field_wire.pdf}
+  \medskip
+  \begin{center}
+    \(\mathbf{B}\): Sentido del campo magnetico  \(\mathbf{I}\): Sentido de la corriente
+  \end{center}
 \end{figure}
+\newpage
+\subsection{Campo magnético en una espira}\label{ssec:espira}
+Sin embargo en conductores con forma de espira los campos magnéticos generados tienden a concentrarse en el centro de la espira 
+ampliandose la fuerza del campo magnético. Podemos conocer el sentido del campo magnetico en una espira usando el metodo
+explicado anteriormente en la \boldit{sección: \ref{ssec:campo_magnetico_conductor}}
+
+
+\subsection{Campo magnético en una bobina }\label{ssec:bobina}
+En caso de que deseemos conseguir un campo magnético superior al de la espira
+podemos unir varias espiras para formar una bobina o "\boldit{solenoide}". {\hspace*{\fill}}
+\begin{wrapfigure}[10]{l}{0.55\textwidth}
+  \includegraphics[width=0.5\textwidth]{magnetic_field_solenoid.pdf} 
+  \caption{Solenoide}
+  \label{fig:solenoide}
+\end{wrapfigure}
+\\Usando este metodo podemos sumar los campos magnéticos parciales de las espiras. 
+Para conocer el sentido del campo magnetico en una bobina o solenoide podemos usar el metodo explicado en la {\boldit{sección: \ref{ssec:campo_magnetico_conductor}}}
+esta vez el sentido de cierre de los dedos alrededor del conductor representa "\(\mathbf{I}\)" (sentido de la corriente) 
+y hacia donde apunte el pulgar representa "\(\mathbf{B}\)" (dirección lineas de fuerza).
+
+\bigskip\bigskip\subsection{Intensidad de campo magnético}\label{ssec:intensidad_de_campo_magnético}
+Magnitud fisica que indica la fuerza del campo magnético. Es representada por la letra \boldit{"\(H\)"}. Su unidad es el amperio-vuelta/metro (\(Av/m \)).\\ 
+Por lo tanto un campo magnético tiene mayor intensidad cuanto mayor es la corriente "\(I\)" que lo recorre y el № de espiras "\(N\)" que lo forman.
+Y sera menor a mayor longitud de la bobina o solenoide \(L\)
+\begin{center}
+  \label{eq:intensidad_campo_magnetico}
+  \begin{math}
+    H = \cfrac{N \cdot I}{L}
+  \end{math}
+  
+\end{center}
+
+\subsection{Fuerza magnetomotriz }\label{ssec:fuerza_magnetomotriz}
+Magnitud física que describe la capacidad de un campo magnético de generar flujo magnético entre dos puntos de un circuito electromagnético.
+esta magnitud nos permite mantener el campo magnético en un circuito electromagnético. Es representada por la letra \boldit{"\(\mathcal{F}\)"}
+y es medida en amperios-vuelta (\( A_v \)). 
+
+
+\bigskip\begin{flushleft}
+Matemáticamente la fuerza magnetomotriz es directamente proporcional a la corriente "\(I\)" del circuito siendo constante 
+el número de espiras "\(N\)" que lo forman.
+\end{flushleft}
+  \begin{center}\[
+  \mathcal{F} = N \cdot I
+\]\label{eq:fuerza_magnetomotriz}
+  \(\mathcal{F}\): Fuerza magnetomotriz \hspace{1.5cm} \(N\): № de espiras \hspace{1.5cm} \(I\): Corriente
+  
+\end{center}
+\bigskip
+Así podemos afirmar que equ: \ref{eq:intensidad_campo_magnetico} es igual a:
+\begin{center}
+  \[
+    H = \frac{\mathcal{F}}{L}
+  \]
+\end{center}
+\newpage
+\subsection{Circuito magnético }\label{ssec:circuito_magnético}
+Si a un solenoide se le introduce una barra ferromagnético en su interior 
+los efectos del campo magnético generado aumentan. Por lo que podemos deducir 
+que un núcleo de cualquier material ferromagnético dentro de un circuito magnético aumenta la fuerza del campo magnético
+sin necesidad de aumentar la corriente \boldit{"\(I\)"}.
+
+
 
 
 \end{document}
