@@ -1,0 +1,50 @@
+\documentclass{report}
+\usepackage{darkmode} %\enabledarkmode
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\begin{document}
+\setcounter{chapter}{1}
+\section{Componentes}\label{sec:componentes}
+Los componentes necesarios son:
+\begin{itemize}
+  \item1x \href{https://www.barcelonaled.com/en/power-supply-33v-for-touch-panels-mi-light.html}{3.3v power supply}
+  \item1x \href{https://www.barcelonaled.com/en/power-supply-33v-for-touch-panels-mi-light.html}{Rele wifi esp-12F}
+  \item1x \href{https://www.amazon.es/Garza-Smarthome-Inteligente-Calefacci%C3%B3n-programable/dp/B07YDYNSB3?th=1}{garza smart thermostat}
+  \item1x 
+  \item1x servidor donde instalar home assistant (ordenador viejo o cualquier cosa)  
+\end{itemize}
+\begin{figure}[h]%
+\centering
+\begin{minipage}{.50\textwidth}
+      \centering
+      \includegraphics[width=.45\linewidth]{figures/psu.png}
+      \captionof{figure}{psu}
+  \end{minipage}%
+  \begin{minipage}{.50\textwidth}
+    \centering
+    \includegraphics[width=.45\linewidth]{figures/relay.png}
+    \captionof{figure}{Rele SP12-f}
+  \end{minipage}%
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.45\textwidth]{figures/thermostat.png}
+    \caption{Thermostat}
+  \end{figure}
+  Pasos para montarlo
+\begin{enumerate}
+  \item instalar home assistant en un servidor (ordenador viejo o raspberry)
+  \item flash tasmota en esp-12F
+  \item flash tasmota conectar reles 
+  \item Configurar home assistant con mqtt broker(mosquitto)
+  \item configurar rutinas para encendido y apago de los reles
+\end{enumerate}
+\newpage
+Diagrama funcionamiento
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{figures/diagrama.png}
+\end{figure}
+\end{document} 
