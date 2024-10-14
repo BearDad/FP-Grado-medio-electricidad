@@ -133,7 +133,7 @@ esta vez el sentido de cierre de los dedos alrededor del conductor representa "\
 y hacia donde apunte el pulgar representa "\(\mathbf{B}\)" (dirección lineas de fuerza).
 
 \bigskip\bigskip\subsection{Intensidad de campo magnético}\label{ssec:intensidad_de_campo_magnético}
-Magnitud fisica que indica la fuerza del campo magnético. Es representada por la letra \boldit{"\(H\)"}. Su unidad es el amperio-vuelta/metro (\(Av/m \)).\\ 
+Magnitud fisica que indica la fuerza o intensidad del campo magnético. Es representada por la letra \boldit{"\(H\)"}. Su unidad es el amperio-vuelta/metro (\(Av/m \)).\\ 
 Por lo tanto un campo magnético tiene mayor intensidad cuanto mayor es la corriente "\(I\)" que lo recorre y el № de espiras "\(N\)" que lo forman.
 Y sera menor a mayor longitud de la bobina o solenoide \(L\)
 \begin{center}
@@ -160,7 +160,7 @@ el número de espiras "\(N\)" que lo forman.
   \(\mathcal{F}\): Fuerza magnetomotriz \hspace{1.5cm} \(N\): № de espiras \hspace{1.5cm} \(I\): Corriente
   
 \end{center}
-\bigskip
+\vspace{1.5em}
 Así podemos afirmar que equ: \ref{eq:intensidad_campo_magnetico} es igual a:
 \begin{center}
   \[
@@ -172,9 +172,57 @@ Así podemos afirmar que equ: \ref{eq:intensidad_campo_magnetico} es igual a:
 Si a un solenoide se le introduce una barra ferromagnético en su interior 
 los efectos del campo magnético generado aumentan. Por lo que podemos deducir 
 que un núcleo de cualquier material ferromagnético dentro de un circuito magnético aumenta la fuerza del campo magnético
-sin necesidad de aumentar la corriente \boldit{"\(I\)"}.
+sin necesidad de aumentar la corriente \boldit{"\(I\)"}. Las lineas de fuerza dependen de la forma del núcleo ferromagnético
+\vspace{1.5em}\newline
+El circuito magnético basico es denominado \boldit{"electroimán"} el cual consiste en un nucle ferromagnético y 
+una bobina alimentada por una fuente de tensión. Al aplicar una corriente a la bobina, el núcleo es magnetizado
+y atrae otros cuerpos ferromagnéticos, sin embargo al cortar la corriente de la bobina el núcleo pierde sus propiedades
+magnéticas. 
+\vspace{1.5em}\newline
+En los circuitos con núcleo magnéticos al calcular la intensidad de campo(\(H\)): \(L\) es el perímetro central del núcleo y no 
+la longitud de la bobina.
+\vspace{1.5em}
+\subsection{Materiales de los circuitos magnéticos}\label{ssec:materiales_circuitos_magneticos}
+Los materiales utilizados en los núcleos de los circuitos magnéticos poseen distintas propiedades
+y no todos se comportan igual ante el campo magnético que general o al que se ven expuestos.
+En los materiales hay cierto tipo de atomos denominado \boldit{spines} que tienen una orientación magnética propia
+y dependiendo de la orientación y magnitud de los spines podemos diferenciar los materiales en:
+\begin{itemize}
+  
+  \item{Diamagnéticos: }
+    En estos materiales los spines no tienen campo magnético pero al inducirles un campo magnético sus spines se orientan en el sentido contrario
+    del campo magnético inducido. Debido a esta propiedad se dice que los materiales diamagnéticos no interactuan con otros materiales magnéticos.
+    \newline(\boldit{\(Ex. \)} Oro, Silicio, Cobre, Hidrógeno, Helio, Germanio, Bronce, Grafito, etc.)
+  
+  \item{Paramagnéticos: } 
+    En estos materiales los spines tienen campo magnético propio y al inducirlos con un campo magnético externo, dichos spines tienden a orientarse
+    ligeramente en la direccion del campo magnético.
+    \newline(\boldit{\(Ex. \)} Aire, Titanio, Aluminio, etc.)
+ 
+  \item{Ferromagnéticos: }
+    En estos materiales los spines tienen campo magnético y al inducirlos con un campo magnético externo, 
+    dichos spines tienden a orientarse en la dirección del campo magnético. El hierro es el material por excelencia
+    no obstante suele alearse para obtener mejores resultados, como los imanes de \boldit{"neodimio"} (\(Nd_2Fe_{14}B\)).
+    \newline(\boldit{\(Ex. \)} Hierro, Cobalto, Níquel, etc.)
+\end{itemize}
 
-
-
+\begin{figure}[h]%
+\centering
+\begin{minipage}{.45\textwidth}
+      \centering
+      \includegraphics[width=.42\linewidth]{figures/spines_random.pdf}
+      \captionof{figure}{Spines en estado natural}
+      \label{fig:spines_random}
+  \end{minipage}%
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[angle=270, origin=c, width=.45\linewidth]{figures/spines_organized.pdf}
+    \captionof{figure}{Spines siguiendo lineas de fuerza}
+    \label{fig:spines_organized}
+  \end{minipage}
+\label{fig:spines}
+\end{figure}
+\newpage
+\subsection{Reluctancia magnética}\label{ssec:reluctancia}
 
 \end{document}
