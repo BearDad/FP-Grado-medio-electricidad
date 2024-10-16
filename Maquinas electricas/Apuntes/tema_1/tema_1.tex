@@ -260,9 +260,9 @@ hasta llegar a un punto donde se estabalice, zona la cual es denominada de satur
 \subsection{Permeabilidad magnetica}\label{ssec:permeabilidad_magnetica}
   Es la \boldit{capacidad} que tienen los materiales de magnetizarse, podemos decir que la permeabilidad magnética es la 
   magnitud inversa a la reluctancia. Es representada con la letra \boldit{"\(\mu\)"}(Mu) y su unidad es el \boldit{henrio/metro} ($H/m$). 
-  Matemáticamente es la relación entre la inducción "{$\mathbf{\beta}$}"
+  Matemáticamente es la relación entre la inducción "{$\mathbf{\beta}$}" y el campo magnético "{$\mathbf{H}$}"
   \begin{figure}[h]%
-  \centering
+    \centering
   \begin{minipage}{.45\textwidth}
     {\LARGE
   $$
@@ -271,12 +271,101 @@ $$}
   \label{equ:permeabilidad}
 \end{minipage}%
 \begin{minipage}{.55\textwidth}
-  \centering
+  \centering{
   \includegraphics[scale=0.6]{permeability/permeability.pdf}
-  
+}
 \end{minipage}
 \caption{Equ: Permenabilidad magnetica y Curvas}
 \end{figure}
+
+\subsection{Histeresis magnéticaa}\label{ssec:histeresis}
+Cuando sometemos a un material ferromagnético a un campo magnético externo, el material presentara
+un efecto de \boldit{magnetización}, sin embargo cuando los efectos del campo magnético externo cesan,
+podemos observar que los materiales presentan indicios de imanación.
+\vspace{1em}\newline
+A este efecto se le denomina \boldit{remanencia}, propiedad que tienen los materiales ferromagnéticos 
+de mantener los efectos de magnetización una vez finalizado el campo magnético externo.\newline
+Aunque la remanencia es favorable en la creación de imanes permanentes es contraproducente para la fabricación de imanes
+y máquinas eléctricas; debido a que pueden producir perdidas de enrgía por exceso de calor.
+\vspace{1em}
+\newline
+El estudio de la remanencia se realiza mediante el analisis de lo denominado \boldit{histéresis magnética}. Este proceso
+consiste en la representación grafica del comportamiento de un material ferromagnético sometido a un campo magnético del cual
+se modifican los valores de $\beta$ y de $\mathrm{H}$ mediante el denominado "\boldit{ciclo de histéresis}".
+\begin{figure}[h]
+  \vspace{1em}
+  \centering 
+  \includegraphics[width=0.65\linewidth]{hysteresis/hysteresis.png}
+  \caption{Ciclo de Histéresis}
+  \label{fig:hysteresis}
+
+\end{figure}
+\newpage
+\subsubsection{Explicación del efecto de histéresis:}
+Debemos disponer de un material que no haya sido sometido con anterioridad a un campo magnético:
+\begin{enumerate}
+  \item Partimos del centro de la grafica y los valores de $\beta$ y $\mathrm{H}$ son van aumentando progresivamente y obtenemos pares de valores
+    de ambas magnitudes. Y la curva de imanación progresa como representado la \ref{fig:hysteresis} por la linea 
+    discontinua.
+
+  \item Alcanzado el punto de saturacioón (a), los valores de $\beta$ y $\mathrm{H}$ se van disminuyendo con la misma pauta utilizada para 
+    la curva anterior. Y observamos que cuando $\mathrm{H}$ es 0, el campo $\beta$ no lo es, presentandose un valor "$\beta_R$" ($R \to$ remanencia).
+
+  \item Si continuamos asignando valores negativos a la intensidad de campo  "$\mathrm{H}$", el campo sera nulo cuando 
+    alcanzemos el punto $-H_C$ ($C \to$ coercividad) corespondiente al denominado campo de coercividad. El cual deberemos aplicar a $H$ para que desaparezca
+    por completo la remanencia del material.
+
+  \item Si continuamos asignando valores negativos a $\beta$ y $\mathrm{H}$ llegaremos al punto de saturación contrario $m$.
+
+  \item Disminuiremos la asignación de valores a $\beta$ y $\mathrm{H}$ y observaremos que cuando la intensidad de campo $\mathrm{H}$ 
+    es 0, el campo $\beta$ no lo es, presentandose un valor "-$\beta_R$" que representa el magnetismo remanante de la polaridad opuesta.
+  \item Si continuamos asignando valores positivos a $\mathrm{H}$ y negativos a $\beta$, alcanzaremos el punto $H_C$ contrario
+    que necesitaremos aplicar para que el material pierda la remanencia.
+\end{enumerate}
+\vspace{1.5em}
+Podemos clasificar los materiales ferromagnéticos como \boldit{"duros"} y \boldit{"blandos"} en funcion del tamaño de su campo coercitivo.
+Usaremos materiales duros para la fabricación de imanes permanentes y materiales blandos para la fabricación de núcleos de máquinas rotativas 
+o transformadores.
+\fspace{1em}
+En la fabricación de máquinas eléctricas deberemos tener en cuenta las pérdidas por histéresis manifestadas en forma de calor,
+las cuales son mayores a mayor es el area que abarca la curva del ciclo de histéresis. Por lo que en la fabricación de máquinas eléctricas 
+que generen campos variables (como las de corriente alterna) deben fabricarse con los materiales mas blandos posibles.
+
+\vspace{1em}
+\subsection{Corrientes de Foucault}\label{ssec:corrientes_de_foucault}
+\begin{wrapfigure}[9]{R}{0.5\textwidth}
+  \vspace{-1.5em}
+  \centering
+  \includegraphics[width=0.5\textwidth]{figures/parasite_currents.png}
+  \caption{Corrientes de Foucault}
+  \label{fig:parasite_currents}
+\end{wrapfigure}
+En núcleos ferromagnéticos sometidos a un campo eléctrico se producen unas series de corrientes inducidas 
+con forma de bucle en el interior del núcleo, las cuales se oponen a al campo magnético del exterior, 
+provocando que los electrones choquen constantemente generando calor y perdidas de energía.
+\fspace{1em}
+Por este motivo los núcleos de las máquinas eléctricas de corriente alterna se construyen con finas
+chapas de hierro al silicio aisladas entre si, lo cual reduce considerablemente las corrientes de Foucault.
+
+\newpage
+\subsection{Fuerza ejercida sobre un conductor por el que circula una corriente}\label{ssec:fuerza_ejercida}
+Si se somete a un conductor por el que circula una corriente eléctrica a un campo magnético, el conductor tiende a salir del dicho campo
+en el sentido dado por la regla de los tres dedos de la mano izquierda (flemmings left hand rule). La aplicaremos de la siguiente forma:
+\begin{itemize}
+  \item Dedo índice indica el sentido del campo $\beta$ 
+  \item Dedo pulgar indica el sentido de la fuerza $F$
+  \item Dedo medio indica el sentido de la corriente eléctrica $I$  
+\end{itemize}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{left-hand/right-hand.pdf}
+\end{figure}
+\nt{
+  También se puede representar el sentido del campo $\beta$ sobre el papel una "$\times$" indicara un campo entrante 
+  y un "$\cdot$" indica un campo saliente.
+}
+\vspace{1.5em}
+\subsection{Fuerza ejercida sobre una espira por la que circula una corriente}\label{ssec:fuerza_espira}
 
 
 
