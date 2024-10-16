@@ -213,6 +213,7 @@ y dependiendo de la orientación y magnitud de los spines podemos diferenciar lo
       \includegraphics[width=.42\linewidth]{figures/spines_random.pdf}
       \captionof{figure}{Spines en estado natural}
       \label{fig:spines_random}
+    
   \end{minipage}%
   \begin{minipage}{.5\textwidth}
     \centering
@@ -224,5 +225,60 @@ y dependiendo de la orientación y magnitud de los spines podemos diferenciar lo
 \end{figure}
 \newpage
 \subsection{Reluctancia magnética}\label{ssec:reluctancia}
+Al igual que la resistencia "$\Omega$" de un conductor electrico, la Reluctancia "$\mathrm{R}$" es la propiedad que tienen los materiales
+ferrmagnéticos de tener una mayor o menor oposición a la formación de líneas de fuerza de un campo magnetico.
+\newline\vspace{1em}
+Según la \boldit{Ley de Hopkinson}: establecemos la siguiente expresión en la que el flujo magnético "$\Phi$" es directamente proporcional
+a la fuerza magnetomotriz "$\mathcal{F}$" e inversamente proporcional a la reluctancia "$\mathrm{R}$":
+\begin{figure}[h]
+  \[
+    \mathrm{\Phi} = \frac{\mathcal{F}}{\mathrm{R}}
+  \]
+\label{equ:reluctancia}
+\end{figure}
+\newline Por lo tanto definimos la reluctancia como:
+\[
+\mathrm{R} = \frac{\mathcal{F}}{\Phi}
+\]
+\newline Y la fuerza magnetomotriz como:
+\[
+\mathcal{F} = \Phi \cdot \mathrm{R}
+\]
+
+\subsection{Curva de magnetización}\label{ssec:curva_magnetizada}
+Al conectar una fuente de tensión variable a un circuito magnético, y usando un teslámetro para medir la inducción magnética $\beta$ generada
+observaremos que en un inicio con poca variación de la intensidad de campo magnético $H$, la $\beta$ aumentara rapidamente
+hasta llegar a un punto donde se estabalice, zona la cual es denominada de saturación, debido a que $\beta$ no aumenta aunque $H$ lo haga considerablemente.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.65\textwidth]{figures/curva_magnetizacion.pdf}
+  \caption{Curva de magnetización}
+  \label{fig:curva_magnetizacion}
+\end{figure}
+
+\newpage
+\subsection{Permeabilidad magnetica}\label{ssec:permeabilidad_magnetica}
+  Es la \boldit{capacidad} que tienen los materiales de magnetizarse, podemos decir que la permeabilidad magnética es la 
+  magnitud inversa a la reluctancia. Es representada con la letra \boldit{"\(\mu\)"}(Mu) y su unidad es el \boldit{henrio/metro} ($H/m$). 
+  Matemáticamente es la relación entre la inducción "{$\mathbf{\beta}$}"
+  \begin{figure}[h]%
+  \centering
+  \begin{minipage}{.45\textwidth}
+    {\LARGE
+  $$
+  \mu = \frac{\beta}{\mathrm{H}}
+$$}
+  \label{equ:permeabilidad}
+\end{minipage}%
+\begin{minipage}{.55\textwidth}
+  \centering
+  \includegraphics[scale=0.6]{permeability/permeability.pdf}
+  
+\end{minipage}
+\caption{Equ: Permenabilidad magnetica y Curvas}
+\end{figure}
+
+
+
 
 \end{document}

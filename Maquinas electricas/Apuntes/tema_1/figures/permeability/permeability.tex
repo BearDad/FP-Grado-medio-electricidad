@@ -1,0 +1,40 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest} % Set compatibility mode to newest
+\usepackage{tikz}
+\usepackage{xcolor}
+
+% Define colors for the plot
+\definecolor{love}{HTML}{eb6f92} % Color for the red curve
+\definecolor{green}{HTML}{31748f} % Color for the green curve
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=6cm, % Further reduce width
+        height=4cm, % Further reduce height
+        xlabel={$H$}, % X-axis label
+        ylabel={$B$}, % Y-axis label
+        xmin=0, xmax=4, % Adjust X-axis limits
+        ymin=0, ymax=3, % Adjust Y-axis limits
+        xtick={0,1,...,4}, % X-axis ticks
+        ytick={0,1,...,3}, % Y-axis ticks
+        axis line style={draw=love, thick}, % Axis color
+        grid=none, % Disable grid lines
+        ]
+
+        % Permeability curve (red)
+        \addplot[color=red, thick] {3 * (1 - exp(-1.2 * x))}; % Red curve (Permeability)
+
+        % Magnetization curve (green)
+        \addplot[color=green, thick] {2*x}; % Change this function as needed
+
+        % Saturation Point (horizontal dashed line at max permeability value)
+        \addplot[black, dashed] coordinates {(0, 3) (4, 3)}; % Horizontal line indicating saturation point
+        \node at (axis cs: 3.5, 3.1) [anchor=west] {Saturation Point}; % Label for saturation point
+
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}
