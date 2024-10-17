@@ -104,8 +104,13 @@
 % CUSTOM COMMANDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\fspace}[1]{\vspace{#1}\newline}
-
-
+\newcommand{\cchapter}[2]{
+  \newpage
+  \phantomsection
+  \setcounter{chapter}{#1}
+\setcounter{section}{0}
+\addcontentsline{toc}{chapter}{#2}
+}
 
 
 
@@ -789,9 +794,9 @@
 {}
 {\hfill\small\bfseries Pg. \thecontentspage}
 []
-\titlecontents{subsection}[3.7pc]
+\titlecontents{subsection}[3.6pc]
 {\addvspace{-1pt}\small}
-{\qquad\contentslabel[\thecontentslabel]{2pc}}
+{\qquad\hspace{1.6pc}\contentslabel[\thecontentslabel]{3pc}}
 {}
 {\hfill\small\bfseries Pg. \thecontentspage}
 []
