@@ -1,5 +1,5 @@
 \documentclass{report}
-\usepackage{darkmode} %\enabledarkmode
+\usepackage{darkmode} \enabledarkmode
 \usepackage{wrapfig}
 \input{preamble}
 \input{macros}
@@ -19,11 +19,8 @@
 
  \tableofcontents
  
- \pagebreak
-\phantomsection
-\setcounter{chapter}{1}
-\addcontentsline{toc}{chapter}{TEMA 1: Magnetismo y electromagnetismo}\label{chap:1}
- \section{Magnetismo }\label{sec:magnetismo}
+\fchapter{1}{TEMA 1: Magnetismo y electromagnetismo}\label{chap:1}
+  \section{Magnetismo }\label{sec:magnetismo}
 
  Las maquinas electricas (o maquinas de campo magnético) son un grupo de maquinas que basan su funcionamiento
  en los fenómenos provocados por el magnetismo y el electromagnetismo 
@@ -69,17 +66,17 @@ los principales efectos del magnetismo son la atraccion de los polos {\boldit{"o
 \end{figure}
 
 \newpage
-\section{Campo magnético }\label{sec:campo_magnético}
+  \section{Campo magnético }\label{sec:campo_magnético}
 Region del espacio donde se perciben las fuerzas magnéticas de un imán o de un elemento magnetizado  
 donde se produce un desplazamiento de cargas de \boldit{norte} a \boldit{sur} representadas graficamente 
 las lineas de fuerza\(_{\ref{fig:magnets}}\)
 .  Si las lineas de fuerza son de polos opuestos se suman y los imanes se atraen por el 
 contrario si las lineas de fuerza son de polos iguales se restan.
 
-\subsection{Flujo magnético }\label{ssec:Flujo}
+  \subsection{Flujo magnético }\label{ssec:Flujo}
 № total de lineas de fuerza que componen un campo magnético. Lo representa "\(\Phi\)" su unidad es el Weber "Wb"
 
-\subsection{Inducción magnética}\label{ssec:Inducción}
+  \subsection{Inducción magnética}\label{ssec:Inducción}
 № de lineas de fuerza que traspasan una unidad de superficie. La {"\boldit{inducción magnética}"} o densidad de flujo magnético 
 lo representa la letra \("\beta"\) y su unidad es el Tesla \("T"\)
 
@@ -90,13 +87,13 @@ lo representa la letra \("\beta"\) y su unidad es el Tesla \("T"\)
 Equation: Relacion entre Flujo e Inducción
 \end{center}
 \nt{El instrumento de medida usado para conocer el valor de inducción magnética de un campo magnético se denomina : {"\boldit{Teslámetro}"}}
-\medskip
-\section{Electromagnetismo }\label{sec:electromagnetismo}
+\vspace{1em}
+  \section{Electromagnetismo }\label{sec:electromagnetismo}
 
 Denominado electromagnetismo, el campo de la electrotecnia que estudia los fenómenos eléctricos y magnéticos
 y los efectos que producen.
 
-\subsection{Campo magnético en un conductor } \label{ssec:campo_magnetico_conductor}
+  \subsection{Campo magnético en un conductor } \label{ssec:campo_magnetico_conductor}
 Cuando un conductor recto lo atraviesa una corriente eléctrica se crea un campo magnético cuyas líneas de fuerza son circulares y concentricas al conductor. 
 Si queremos conocer el sentido de las lineas de fuerza podemos usar la \boldit{"regla de la mano derecha"} como visto en \ref{fig:Campo Magnetico de un conductor recto}
 el pulgar representa \(\mathbf{I}\) y los dedos alrededor del conductor representan \(\mathbf{B}\).
@@ -105,21 +102,21 @@ El campo magnético en un coductor recto se encuentra difuminado y no tiene apli
   \centering
   \caption{Campo magnetico de un conductor recto.}
   \label{fig:Campo Magnetico de un conductor recto}
-  \medskip
+  \vspace{.5em}
   \includegraphics[width=0.45\textwidth]{magnetic_field_wire.pdf}
-  \medskip
+  \vspace{.5em}
   \begin{center}
     \(\mathbf{B}\): Sentido del campo magnetico  \(\mathbf{I}\): Sentido de la corriente
   \end{center}
 \end{figure}
 \newpage
-\subsection{Campo magnético en una espira}\label{ssec:espira}
+  \subsection{Campo magnético en una espira}\label{ssec:espira}
 Sin embargo en conductores con forma de espira los campos magnéticos generados tienden a concentrarse en el centro de la espira 
 ampliandose la fuerza del campo magnético. Podemos conocer el sentido del campo magnetico en una espira usando el metodo
 explicado anteriormente en la \boldit{sección: \ref{ssec:campo_magnetico_conductor}}
 
 
-\subsection{Campo magnético en una bobina }\label{ssec:bobina}
+  \subsection{Campo magnético en una bobina }\label{ssec:bobina}
 En caso de que deseemos conseguir un campo magnético superior al de la espira
 podemos unir varias espiras para formar una bobina o "\boldit{solenoide}". {\hspace*{\fill}}
 \begin{wrapfigure}[10]{l}{0.55\textwidth}
@@ -127,12 +124,12 @@ podemos unir varias espiras para formar una bobina o "\boldit{solenoide}". {\hsp
   \caption{Solenoide}
   \label{fig:solenoide}
 \end{wrapfigure}
-\\Usando este metodo podemos sumar los campos magnéticos parciales de las espiras. 
+Usando este metodo podemos sumar los campos magnéticos parciales de las espiras. 
 Para conocer el sentido del campo magnetico en una bobina o solenoide podemos usar el metodo explicado en la {\boldit{sección: \ref{ssec:campo_magnetico_conductor}}}
 esta vez el sentido de cierre de los dedos alrededor del conductor representa "\(\mathbf{I}\)" (sentido de la corriente) 
 y hacia donde apunte el pulgar representa "\(\mathbf{B}\)" (dirección lineas de fuerza).
-
-\bigskip\bigskip\subsection{Intensidad de campo magnético}\label{ssec:intensidad_de_campo_magnético}
+\fspace{2em}
+\subsection{Intensidad de campo magnético}\label{ssec:intensidad_de_campo_magnético}
 Magnitud fisica que indica la fuerza o intensidad del campo magnético. Es representada por la letra \boldit{"\(H\)"}. Su unidad es el amperio-vuelta/metro (\(Av/m \)).\\ 
 Por lo tanto un campo magnético tiene mayor intensidad cuanto mayor es la corriente "\(I\)" que lo recorre y el № de espiras "\(N\)" que lo forman.
 Y sera menor a mayor longitud de la bobina o solenoide \(L\)
@@ -144,7 +141,7 @@ Y sera menor a mayor longitud de la bobina o solenoide \(L\)
   
 \end{center}
 
-\subsection{Fuerza magnetomotriz }\label{ssec:fuerza_magnetomotriz}
+  \subsection{Fuerza magnetomotriz }\label{ssec:fuerza_magnetomotriz}
 Magnitud física que describe la capacidad de un campo magnético de generar flujo magnético entre dos puntos de un circuito electromagnético.
 esta magnitud nos permite mantener el campo magnético en un circuito electromagnético. Es representada por la letra \boldit{"\(\mathcal{F}\)"}
 y es medida en amperios-vuelta (\( A_v \)). 
@@ -168,7 +165,7 @@ Así podemos afirmar que equ: \ref{eq:intensidad_campo_magnetico} es igual a:
   \]
 \end{center}
 \newpage
-\subsection{Circuito magnético }\label{ssec:circuito_magnético}
+  \subsection{Circuito magnético }\label{ssec:circuito_magnético}
 Si a un solenoide se le introduce una barra ferromagnético en su interior 
 los efectos del campo magnético generado aumentan. Por lo que podemos deducir 
 que un núcleo de cualquier material ferromagnético dentro de un circuito magnético aumenta la fuerza del campo magnético
@@ -182,7 +179,7 @@ magnéticas.
 En los circuitos con núcleo magnéticos al calcular la intensidad de campo(\(H\)): \(L\) es el perímetro central del núcleo y no 
 la longitud de la bobina.
 \vspace{1.5em}
-\subsection{Materiales de los circuitos magnéticos}\label{ssec:materiales_circuitos_magneticos}
+  \subsection{Materiales de los circuitos magnéticos}\label{ssec:materiales_circuitos_magneticos}
 Los materiales utilizados en los núcleos de los circuitos magnéticos poseen distintas propiedades
 y no todos se comportan igual ante el campo magnético que general o al que se ven expuestos.
 En los materiales hay cierto tipo de atomos denominado \boldit{spines} que tienen una orientación magnética propia
@@ -224,7 +221,7 @@ y dependiendo de la orientación y magnitud de los spines podemos diferenciar lo
 \label{fig:spines}
 \end{figure}
 \newpage
-\subsection{Reluctancia magnética}\label{ssec:reluctancia}
+  \subsection{Reluctancia magnética}\label{ssec:reluctancia}
 Al igual que la resistencia "$\Omega$" de un conductor electrico, la Reluctancia "$\mathrm{R}$" es la propiedad que tienen los materiales
 ferrmagnéticos de tener una mayor o menor oposición a la formación de líneas de fuerza de un campo magnetico.
 \newline\vspace{1em}
@@ -245,7 +242,7 @@ a la fuerza magnetomotriz "$\mathcal{F}$" e inversamente proporcional a la reluc
 \mathcal{F} = \Phi \cdot \mathrm{R}
 \]
 
-\subsection{Curva de magnetización}\label{ssec:curva_magnetizada}
+  \subsection{Curva de magnetización}\label{ssec:curva_magnetizada}
 Al conectar una fuente de tensión variable a un circuito magnético, y usando un teslámetro para medir la inducción magnética $\beta$ generada
 observaremos que en un inicio con poca variación de la intensidad de campo magnético $H$, la $\beta$ aumentara rapidamente
 hasta llegar a un punto donde se estabalice, zona la cual es denominada de saturación, debido a que $\beta$ no aumenta aunque $H$ lo haga considerablemente.
@@ -257,7 +254,7 @@ hasta llegar a un punto donde se estabalice, zona la cual es denominada de satur
 \end{figure}
 
 \newpage
-\subsection{Permeabilidad magnetica}\label{ssec:permeabilidad_magnetica}
+  \subsection{Permeabilidad magnetica}\label{ssec:permeabilidad_magnetica}
   Es la \boldit{capacidad} que tienen los materiales de magnetizarse, podemos decir que la permeabilidad magnética es la 
   magnitud inversa a la reluctancia. Es representada con la letra \boldit{"\(\mu\)"}(Mu) y su unidad es el \boldit{henrio/metro} ($H/m$). 
   Matemáticamente es la relación entre la inducción "{$\mathbf{\beta}$}" y el campo magnético "{$\mathbf{H}$}"
@@ -278,7 +275,7 @@ $$}
 \caption{Equ: Permenabilidad magnetica y Curvas}
 \end{figure}
 
-\subsection{Histeresis magnéticaa}\label{ssec:histeresis}
+  \subsection{Histeresis magnéticaa}\label{ssec:histeresis}
 Cuando sometemos a un material ferromagnético a un campo magnético externo, el material presentara
 un efecto de \boldit{magnetización}, sin embargo cuando los efectos del campo magnético externo cesan,
 podemos observar que los materiales presentan indicios de imanación.
@@ -301,7 +298,7 @@ se modifican los valores de $\beta$ y de $\mathrm{H}$ mediante el denominado "\b
 
 \end{figure}
 \newpage
-\subsubsection{Explicación del efecto de histéresis:}
+    \subsubsection{Explicación del efecto de histéresis:}
 Debemos disponer de un material que no haya sido sometido con anterioridad a un campo magnético:
 \begin{enumerate}
   \item Partimos del centro de la grafica y los valores de $\beta$ y $\mathrm{H}$ son van aumentando progresivamente y obtenemos pares de valores
@@ -332,7 +329,7 @@ las cuales son mayores a mayor es el area que abarca la curva del ciclo de hist�
 que generen campos variables (como las de corriente alterna) deben fabricarse con los materiales mas blandos posibles.
 
 \vspace{1em}
-\subsection{Corrientes de Foucault}\label{ssec:corrientes_de_foucault}
+  \subsection{Corrientes de Foucault}\label{ssec:corrientes_de_foucault}
 \begin{wrapfigure}[9]{R}{0.5\textwidth}
   \vspace{-1.5em}
   \centering
@@ -348,7 +345,7 @@ Por este motivo los núcleos de las máquinas eléctricas de corriente alterna s
 chapas de hierro al silicio aisladas entre si, lo cual reduce considerablemente las corrientes de Foucault.
 
 \newpage
-\subsection{Fuerza ejercida sobre un conductor por el que circula una corriente}\label{ssec:fuerza_ejercida}
+  \subsection{Fuerza ejercida sobre un conductor por el que circula una corriente}\label{ssec:fuerza_ejercida}
 Si se somete a un conductor por el que circula una corriente eléctrica a un campo magnético, el conductor tiende a salir del dicho campo
 en el sentido dado por la regla de los tres dedos de la mano izquierda (flemmings left hand rule). La aplicaremos de la siguiente forma:
 \begin{itemize}
@@ -365,37 +362,38 @@ en el sentido dado por la regla de los tres dedos de la mano izquierda (flemming
   y un "$\cdot$" indica un campo saliente.
 }
 \vspace{1.5em}
-\subsection{Fuerza ejercida sobre una espira por la que circula una corriente}\label{ssec:fuerza_espira}
+  \subsection{Fuerza ejercida sobre una espira por la que circula una corriente}\label{ssec:fuerza_espira}
 
 
-\subsection{Fuerza electromotriz ejercida en un conductor}\label{ssec:fuerza_electromotriz_conductor}
+  \subsection{Fuerza electromotriz ejercida en un conductor}\label{ssec:fuerza_electromotriz_conductor}
 
-\subsection{autoinducción}\label{ssec:autoinducción}
+  \subsection{autoinducción}\label{ssec:autoinducción}
+
 
 \fchapter{2}{TEMA 2: Materiales y herrramientas del bobinador}\label{chap:2}
 
-\section{Materiales}\label{sec:materiales}
-\subsection{Hilo esmaltado}\label{ssec:hilo_esmaltado}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  \section{Materiales}\label{sec:materiales}
+  
+    \subsection{Hilo esmaltado}\label{ssec:hilo_esmaltado}
+    
+      Conductor eléctrico por excelencia utilizado en la fabricacón de circuitos electromagnéticos de maquinas eléctricas.
+      Aunque el cobre es el más utilizado en circuitos cuya ligereza sea importante se usara aluminio. Sin embargo el aluminio representa 
+      desventajas respecto al cobre, es díficil de soldar sin herramientas especiales y tiene una menor resistencia a las torsiones, lo que facilita
+      su rotura y deformcación al manipularlo.
+      \fspace{1em}
+      Al igual que otros materiales y dispositivos utilizados en electrotecnia, los cables esmaltados estan estandarizados, siendo las principales normas
+      las siguientes: 
+      \begin{itemize}
+        \item{\boldit{IEEC 60317:}}
+          Norma de la Comisión Electrotécnica Internacional, usada en Europa y Asia (excepto Japón).
+      \item{\boldit{NEMA MW 1000:}}
+          Norma de la National Electical Manufacturers Association de Norteamérica, aplicada en Norteamérica y en paises de latinoamérica.
+        \item{\boldit{JIS C 3202:}}
+          Norma de la Japanese Standards Association y de aplicación exclusiva en Japón.
+      \end{itemize}
+      \vspace{1em}
+      Son comercializados con distintas formas ($Ex.$ Circular, rectangular o cuadrado) distintas geometrías permiten
+      aprovechar el espacio de los carretes (transformadores) y los espacios de las ranuras (máquinas rotativas).  
 
 
 
