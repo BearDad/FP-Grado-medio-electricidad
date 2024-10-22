@@ -1,0 +1,38 @@
+\documentclass{report}
+% \usepackage{darkmode} \enabledarkmode
+\usepackage{wrapfig}
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+\usepackage{enumitem}
+\graphicspath{{../.figures/}}
+\title{\Huge{Maquinas Electricas}}
+\author{\large{Daniel Carbajales}}
+\date{22 de octubre de 2024}
+\hbadness=99999
+
+
+
+\begin{document}
+  \section*{Práctica Ibedrola distribución\hfill22 de octubre de 2024}
+    \subsection*{1. Mi consumo}
+      \begin{enumerate}[label=\alph*)]
+        \item{Por dia: }Consumo del dia anterior: 
+          \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.1]{consumo_dia.jpg}
+          \end{figure}
+        \item{Por semana: }Consumo de la semana anterior:
+          \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.1]{consumo_semana.jpg}
+          \end{figure}
+          \newpage
+        \item{Por mes: }Consumo del mes anterior:
+          \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.1]{consumo_mes.jpg}
+          \end{figure}
+
+      \end{enumerate}
+\end{document}
