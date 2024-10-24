@@ -1,0 +1,34 @@
+
+\documentclass{report}
+% \usepackage{darkmode} \enabledarkmode
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\input{~/obsidian/clase/template/preamble}
+\input{~/obsidian/clase/template/macros}
+\input{~/obsidian/clase/template/letterfonts}
+\graphicspath{{../.figures/}}
+\title{\Huge{Maquinas Electricas}}
+\author{\large{Daniel Carbajales}}
+\date{22 de octubre de 2024}
+\hbadness=99999
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% USE THIS FOR TITLE AND TOC (CLASS NOTES)     %%%%
+%%%%  \maketitle                                  %%%%
+%%%%  \newpage                                    %%%%
+%%%% %  |pdfbookmark[<level>]{<tittle>}{<dest>}   %%%%
+%%%%  \pdfbookmark[section]{\contentsname}{toc}   %%%%
+%%%%                                              %%%%
+%%%%  \tableofcontents                            %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% USE THIS FOR NON TITLE AND NON TOC FILE(HOMEWORK AND SUCH)
+
+\fchapter{1}{tittle}\label{chapter:NUMBER}  %this does not have a chapter tittle its only for the TOC 
+\section{tittle}\label{sec:tittle}
+some content
+\subsection{tittle}\label{subsec:tittle}
+somecontent
+
+\end{document}
