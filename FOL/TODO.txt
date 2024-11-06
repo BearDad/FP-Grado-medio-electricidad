@@ -22,3 +22,4 @@ Encuesta:
     Gustos y preferencias:
     Población donde viven:
     Por que utilizarian tu negocio
+minimo 20 encuestas.
